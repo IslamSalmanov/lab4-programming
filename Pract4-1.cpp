@@ -1,28 +1,23 @@
 #include <iostream>
 #include <iomanip>
-#include <cmath>
 int main(){
-    double a,b,c;
-    std::cout << "ВВедите a: ";
+    double a,b;
+    char op;
+    std::cout << "Введите первое число: ";
     std::cin >> a;
-    std::cout << "ВВедите b: ";
+    std::cout << "Введите второе число: ";
     std::cin >> b;
-    std::cout << "ВВедите c: ";
-    std::cin >> c;
-    if(a==0){std::cout << "Это не квадратное уравнение" << "\n"; return 0;}
-    else{
-        double D=b*b-4.0*a*c;
-        if(D>0){
-            double x1=(-b+std::sqrt(D))/2.0*a;
-            double x2=(-b-std::sqrt(D))/2.0*a;
-            std::cout << "Два корня: " << "x1 = " << x1 << " x2 = " << x2 << "\n";
-            return 0;
-        }
-        else if(D==0){
-            double x1=-b/2.0*a;
-            std::cout << "Один корень: " << "x = " << x1 << "\n";
-            return 0;
-        }
-        else{std::cout << "Нет корней" << "\n"; return 0;}
+    std::cout << "Введите операцию ('+', '-', '*', '/'): ";
+    std::cin >> op;
+    std::cout << std::fixed << std::setprecision(2);
+    switch(op){
+        case '+': std::cout << "Результат: " << a + b << "\n"; break;
+        case '-': std::cout << "Результат: " << a - b << "\n"; break;
+        case '*': std::cout << "Результат: " << a * b << "\n"; break;
+        case '/': 
+            if(b==0){std::cout << "Ошибка: деление на ноль" << "\n";}
+            else{std::cout << "Результат: " << a/b << "\n"; break;}
+        default: std::cout << "Неизвестная операция";
     }
+    return 0;
 }
