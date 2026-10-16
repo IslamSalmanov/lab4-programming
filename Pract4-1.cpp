@@ -1,16 +1,14 @@
 #include <iostream>
+#include <string>
+using namespace std;
 int main(){
-    double a,b,c;
-    std::cout << "Первая сторона: ";
-    std::cin >> a;
-    std::cout << "Вторая сторона: ";
-    std::cin >> b;
-    std::cout << "Третья сторона: ";
-    std::cin >> c;
-    if(a+b>c && a+c>b && c+b>a){
-        if(a==b && b==c){std::cout << "Равносторонний треугольник" << "\n"; return 0;}
-        else if(a==b || a==c || b==c){std::cout << "Равнобедренный треугольник" << "\n"; return 0;}
-        else{std::cout << "Разносторонний треугольник" << "\n"; return 0;}
-    }
-    else{std::cout << "Это не треугольник" << "\n"; return 0;}
+    int n;
+    cout << "Введите номер месяца: ";
+    cin >> n;
+    string a=to_string(n%12);
+    if(a=="0" || a=="1" || a=="2"){cout << "Сезон - зима" << "\n"; return 0;}
+    else if(a=="3" || a=="4" || a=="5"){cout << "Сезон - весна" << "\n"; return 0;}
+    else if(a=="6" || a=="7" || a=="8"){cout << "Сезон - лето" << "\n"; return 0;}
+    else if(a=="9" || a=="10" || a=="11"){cout << "Сезон - осень" << "\n"; return 0;}
+    else{cout << "Ошибка - это не номер месяца" << "\n"; return 0;}
 }

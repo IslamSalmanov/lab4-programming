@@ -1,12 +1,12 @@
-a=float(input("Первая сторона: "))
-b=float(input("Вторая сторона: "))
-c=float(input("Третья сторона: "))
-if a+b>c and a+c>b and b+c>a:
-    if a==b==c:
-        print("Равносторонний треугольник")
-    elif a==b or a==c or b==c:
-        print("Равнобедренный треугольник")
-    else:
-        print("Разносторонний треугольник")
+a=input("Введите номер месяца: ")
+n=str(int(a)%12)
+if n=='1' or n=='2' or n=='0':
+    print("Сезон - зима")
+elif n=='3' or n=='4' or n=='5':
+    print("Сезон - весна")
+elif n=='6' or n=='7' or n=='8':
+    print("Сезон - лето")
+elif n=='9' or n=='10' or n=='11':
+    print("Сезон - осень")
 else:
-    print("Это не треугольник")
+    print("Ошибка - это не номер месяца")
