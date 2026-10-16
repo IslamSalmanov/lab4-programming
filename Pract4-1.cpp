@@ -1,14 +1,11 @@
 #include <iostream>
-#include <iomanip>
 int main(){
-    double a,b,c;
-    std::cout << "Введите первое число: ";
+    int a;
+    std::cout << "Введите ваш возраст: ";
     std::cin >> a;
-    std::cout << "Введите второе число: ";
-    std::cin >> b;
-    std::cout << "Введите третье число: ";
-    std::cin >> c;
-    if(a>=b && a>=c){std::cout << "Максимальное: " << a << "\n"; return 0;}
-    else if(b>=a && b>=c){std::cout << "Максимальное: " << b << "\n"; return 0;}
-    else{std::cout << "Максимальное: " << c << "\n"; return 0;}
+    if(a<0){std::cout << "Неккоректный выбор" << "\n"; return 0;}
+    if(a<13){std::cout << "Ребёнок" << "\n"; return 0;}
+    else if(a<18){std::cout << "Подросток" << "\n"; return 0;}
+    else if(a<65){std::cout << "Взрослый" << "\n"; return 0;}
+    else{std::cout << "Пожилой" << "\n"; return 0;}
 }
