@@ -1,9 +1,14 @@
 #include <iostream>
 #include <iomanip>
 int main(){
-    int a;
-    std::cout << "Введите ваше число: ";
-    std::cin >>a;
-    if( a%2==0){std::cout << "Ваше число чётное" << "\n"; return 0;}
-    else{std::cout << "Ваше число нечётное" << "\n"; return 0;}
+    double a,b,c;
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
+    std::cout << "Введите третье число: ";
+    std::cin >> c;
+    if(a>=b && a>=c){std::cout << "Максимальное: " << a << "\n"; return 0;}
+    else if(b>=a && b>=c){std::cout << "Максимальное: " << b << "\n"; return 0;}
+    else{std::cout << "Максимальное: " << c << "\n"; return 0;}
 }
