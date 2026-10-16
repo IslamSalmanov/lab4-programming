@@ -2,14 +2,15 @@
 #include <iomanip>
 using namespace std;
 int main(){
-    float v,r;
-    cout << "Введите вес (кг): ";
-    cin >> v;
-    cout << "Введите рост (м): ";
-    cin >> r;
-    float im = v/(r*r);
-    if(im<=18.5){cout << "Недостаточный вес" << "\n"; return 0;}
-    else if(im>18.5 && im<25){cout << "Норма" << "\n"; return 0;}
-    else if(im>24.99 && im<30){cout << "Избыточный вес" << "\n"; return 0;}
-    else{cout << "Ожирение" << "\n"; return 0;}
+    float x,y;
+    cout << "Введите координату x: ";
+    cin >> x;
+    cout << "Введите координату y: ";
+    cin >> y;
+    if(x>0 && y>0){cout << "Точка в первой четверти" << "\n"; return 0;}
+    else if(x>0 && y<0){cout << "Точка в четвертой четверти" << "\n"; return 0;}
+    else if(x<0 && y>0){cout << "Точка во второй четверти" << "\n"; return 0;}
+    else if(x<0 && y<0){cout << "Точка в третьей четверти" << "\n"; return 0;}
+    else if(x==0 && y==0){cout << "Точка в начале координат" << "\n"; return 0;}
+    else{cout << "Точка на оси координат" << "\n"; return 0;}
 }
