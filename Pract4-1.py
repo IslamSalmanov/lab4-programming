@@ -1,5 +1,12 @@
-n=int(input("Введите год: "))
-if (n%4==0 and n%100!=0) or n%400==0:
-    print(f'{n} - високосный год')
+a=float(input("Первая сторона: "))
+b=float(input("Вторая сторона: "))
+c=float(input("Третья сторона: "))
+if a+b>c and a+c>b and b+c>a:
+    if a==b==c:
+        print("Равносторонний треугольник")
+    elif a==b or a==c or b==c:
+        print("Равнобедренный треугольник")
+    else:
+        print("Разносторонний треугольник")
 else:
-    print(f'{n} - не високосный год')
+    print("Это не треугольник")
